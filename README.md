@@ -11,3 +11,5 @@ SnakeWS
 7c. Select Projects, click the add button, choose SimpleIo
 7d. You should be able to compile the project, but running it will fail due to a null pointer exception
 8. Go to: https://github.com/tamf/SnakeWS-Victoria/issues and start with #1
+
+Cloned from https://github.com/adamjw/SnakeWS
