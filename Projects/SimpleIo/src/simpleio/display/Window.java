@@ -78,11 +78,11 @@ public class Window {
 		glClearColor(0, 0, 0, 0);
 	}
 	
-	private void setColour(Colour colour){
+	private static void setColour(Colour colour){
 		glColor4ub((byte) colour.getRedComponent(), (byte) colour.getGreenComponent(), (byte) colour.getBlueComponent(), (byte) colour.getAlphaComponent());
 	}
 	
-	public void drawLine(Colour colour, Point p0, Point p1){
+	public static void drawLine(Colour colour, Point p0, Point p1){
 		setColour(colour);
 		glBegin(GL_LINES);
 		{
