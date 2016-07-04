@@ -24,16 +24,13 @@ import snake.game.state.Snake;
 public class SnakeGame {
 
 	// Constants
-	public static final int HEADER_HEIGHT = 36;
-	public static final int CELL_SIZE = 24;
-	public static final int NUMBER_OF_CELLS = 15;
-	public static final int WINDOW_WIDTH = CELL_SIZE * NUMBER_OF_CELLS;
-	public static final int WINDOW_HEIGHT = CELL_SIZE * NUMBER_OF_CELLS + HEADER_HEIGHT;
 	private static final int FRAMES_PER_MOVE = 6;
+	private static final int HEADER_HEIGHT = 36;
+	private static final int CELL_SIZE = 24;
+	private static final int NUMBER_OF_CELLS = 15;
+	private static final int WINDOW_WIDTH = CELL_SIZE * NUMBER_OF_CELLS;
+	private static final int WINDOW_HEIGHT = CELL_SIZE * NUMBER_OF_CELLS + HEADER_HEIGHT;
 	private static final int SNAKE_STARTING_LENGTH = 2;
-	private static final int STARTING_X_POSITION = 1;
-	private static final int STARTING_Y_POSITION = 1;
-	private static final Direction STARTING_DIRECTION = Direction.right;
 
 	// IO
 	private Window window;
@@ -94,7 +91,7 @@ public class SnakeGame {
 	private void initializeState() {
 		fruit = new Fruit();
 		board = new Board(NUMBER_OF_CELLS, NUMBER_OF_CELLS);
-		snake = new Snake(STARTING_DIRECTION, new Position(STARTING_X_POSITION, STARTING_Y_POSITION), SNAKE_STARTING_LENGTH);
+		snake = new Snake(Direction.right, new Position(1, 1), SNAKE_STARTING_LENGTH);
 		gameInfo = new GameInfo("Snake game", FRAMES_PER_MOVE);
 	}
 
