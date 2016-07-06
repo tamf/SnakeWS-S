@@ -19,7 +19,6 @@ public class BoardDrawer {
 	}
 
 	public void drawBoard(Board board) {
-
 	}
 
 	public void drawSquare(Colour colour, Position p) {
