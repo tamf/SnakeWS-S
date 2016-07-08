@@ -19,6 +19,7 @@ public class BoardDrawer {
 	}
 
 	public void drawBoard(Board board) {
+		BoardDrawer newBoard = new BoardDrawer(new Window("Snake Game Grid", cellSize * 15, cellSize * 15 + 36), new Point (0, 36), 24);
 	}
 
 	public void drawSquare(Colour colour, Position p) {
