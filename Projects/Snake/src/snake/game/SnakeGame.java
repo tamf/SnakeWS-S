@@ -31,6 +31,8 @@ public class SnakeGame {
 	private static final int WINDOW_WIDTH = CELL_SIZE * NUMBER_OF_CELLS;
 	private static final int WINDOW_HEIGHT = CELL_SIZE * NUMBER_OF_CELLS + HEADER_HEIGHT;
 	private static final int SNAKE_STARTING_LENGTH = 2;
+	private static final Position STARTING_POSITION = new Position(1, 1);
+	private static final Direction STARTING_DIRECTION = Direction.right;
 
 	// IO
 	private Window window;
@@ -91,7 +93,7 @@ public class SnakeGame {
 	private void initializeState() {
 		fruit = new Fruit();
 		board = new Board(NUMBER_OF_CELLS, NUMBER_OF_CELLS);
-		snake = new Snake(Direction.right, new Position(1, 1), SNAKE_STARTING_LENGTH);
+		snake = new Snake(STARTING_DIRECTION, STARTING_POSITION, SNAKE_STARTING_LENGTH);
 		gameInfo = new GameInfo("Snake game", FRAMES_PER_MOVE);
 	}
 
