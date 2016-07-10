@@ -19,7 +19,15 @@ public class BoardDrawer {
 	}
 
 	public void drawBoard(Board board) {
-		BoardDrawer newBoard = new BoardDrawer(new Window("Snake Game Grid", cellSize * 15, cellSize * 15 + 36), new Point (0, 36), 24);
+		// Horizontal gridlines
+		for (int i = 0; i < board.getNumberOfRows(); i++) {
+			window.drawLine(Colour.WHITE, topLeft.addY(cellSize * i), topLeft.addXY(window.getWidth(), cellSize * i));
+		}
+
+		// Vertical gridlines
+		for (int i = 0; i < board.getNumberOfColumns(); i++) {
+			window.drawLine(Colour.WHITE, topLeft.addX(cellSize * i), new Point(cellSize * i, window.getHeight()));
+		}
 	}
 
 	public void drawSquare(Colour colour, Position p) {
