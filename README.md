@@ -1,6 +1,6 @@
 SnakeWS
 =======
-1. Download the github program
+1. Download git
 2. Pull the code from this repo
 3. Download eclipse or whatever
 4. Create a workspace anywhere you like
